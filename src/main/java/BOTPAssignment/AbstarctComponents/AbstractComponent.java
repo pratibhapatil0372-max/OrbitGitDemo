@@ -24,12 +24,14 @@ public class AbstractComponent {
 	
 	@FindBy(css="[routerlink*='cart']")
 	WebElement cartHeader;
+	
 	@FindBy(css=".ng-animating")
 	WebElement spinner;
 	
 	@FindBy(css="[routerlink*='myorders']")
 	WebElement ordersHeader;
 	
+	By cartlink = By.cssSelector("[routerlink*='cart']");
 	By toastMessage = By.cssSelector("#toast-container");
 
 	public void waitForElementToAppear(By findBy) {
@@ -41,7 +43,7 @@ public class AbstractComponent {
 	public void waitForWebElementToBeClickable(By findBy) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.elementToBeClickable(findBy));
-		
+				
 	}
 	
 	public void waitForWebElementToAppear(WebElement findBy) {
@@ -60,7 +62,12 @@ public class AbstractComponent {
 	{
 		waitForElementToDisappear(spinner);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].scrollIntoView(true);",cartHeader);	
+		waitForWebElementToBeClickable(cartlink);
+		js.executeScript("window.scrollTo(0, 0);");
+		//js.executeScript("arguments[0].scrollIntoView({behavior:'instant', block:'start'});", cartlink);
+		//js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", cartHeader);
+		//js.executeScript("document.documentElement.scrollTop = 0;");
+		waitForElementToAppear(cartlink);
 		cartHeader.click();
 		CartPage cartpage = new CartPage(driver);
 		return cartpage;

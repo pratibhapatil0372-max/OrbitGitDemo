@@ -30,6 +30,9 @@ public class ProductCatalogue extends AbstractComponent{
 	@FindBy(xpath="//div[@class='row']//div[2]//div[1]//div[1]//button[2]")
 	WebElement addCart;
 	
+	@FindBy(css="[routerlink*='cart']")
+	WebElement cartHeader;
+	
 	By productsBy = By.cssSelector(".offset-sm-1");
 	By addToCart = By.xpath("//div[@class='row']//div[2]//div[1]//div[1]//button[2]");
 	By toastMessage = By.cssSelector("#toast-container");
@@ -52,9 +55,8 @@ public class ProductCatalogue extends AbstractComponent{
 		waitForWebElementToBeClickable(addToCart);
 		prod.findElement(addToCart).click();
 		//waitForElementToDisappear(spinner);
-		//waitForElementToAppear(toastMessage);
-			
-		
+		waitForElementToAppear(toastMessage);		
+						
 	}
 	
 		

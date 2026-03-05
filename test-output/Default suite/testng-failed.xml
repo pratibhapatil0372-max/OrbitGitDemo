@@ -5,7 +5,7 @@
     <classes>
       <class name="BOTPAssignment.SeleniumFrameworkDesign.Tests.SubmitOrderTest">
         <methods>
-          <include name="submitOrder" invocation-numbers="0 1 2"/>
+          <include name="submitOrder" invocation-numbers="1 2"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
         </methods>
