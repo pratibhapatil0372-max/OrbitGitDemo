@@ -9,8 +9,7 @@
     <classes>
       <class name="BOTPAssignment.SeleniumFrameworkDesign.Tests.SubmitOrderTest"/>
     </classes>
-  </test> <!-- Test -->
-  
+  </test> <!-- Test -->  
    <test thread-count="5" name="Error Validations Test">
     <classes>
       <class name="BOTPAssignment.SeleniumFrameworkDesign.Tests.ErrorValidationsTest"/>
@@ -19,6 +18,11 @@
   <test thread-count="5" name="Search Product Test">
     <classes>
       <class name="BOTPAssignment.SeleniumFrameworkDesign.Tests.SearchProductTest"/>
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="5" name="Order History">
+    <classes>
+      <class name="BOTPAssignment.SeleniumFrameworkDesign.Tests.OrderHistoryTest"/>
     </classes>
   </test> <!-- Test -->
   

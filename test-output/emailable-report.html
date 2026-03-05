@@ -8,89 +8,85 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">39,418</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Submit Order Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">51,732</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Error Validations Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">36,008</td><td></td><td></td></tr>
+<tr><td><a href="#t2">Search Product Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">36,024</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t3">Order History</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">27,005</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">4</th><th class="num">0</th><th class="num">0</th><th class="num attn">8</th><th class="num">150,769</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">BOTPAssignment.SeleniumFrameworkDesign.Tests.SubmitOrderTest</td><td><a href="#m0">submitOrder</a></td><td rowspan="2">1772710294752</td><td rowspan="2">46</td></tr><tr class="failedeven"><td><a href="#m1">submitOrder</a></td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">BOTPAssignment.SeleniumFrameworkDesign.Tests.SubmitOrderTest</td><td><a href="#m2">submitOrder</a></td><td rowspan="1">1772710264434</td><td rowspan="1">16927</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Submit Order Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">BOTPAssignment.SeleniumFrameworkDesign.Tests.SubmitOrderTest</td><td><a href="#m0">submitOrder</a></td><td rowspan="2">1772711520667</td><td rowspan="2">38</td></tr><tr class="failedeven"><td><a href="#m1">submitOrder</a></td></tr><tr><th colspan="4">Submit Order Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">BOTPAssignment.SeleniumFrameworkDesign.Tests.SubmitOrderTest</td><td><a href="#m2">submitOrder</a></td><td rowspan="1">1772711498063</td><td rowspan="1">16500</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Error Validations Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">BOTPAssignment.SeleniumFrameworkDesign.Tests.ErrorValidationsTest</td><td><a href="#m3">productErrorValidation</a></td><td rowspan="2">1772711557021</td><td rowspan="2">71</td></tr><tr class="failedeven"><td><a href="#m4">productErrorValidation</a></td></tr><tr><th colspan="4">Error Validations Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">BOTPAssignment.SeleniumFrameworkDesign.Tests.ErrorValidationsTest</td><td><a href="#m5">productErrorValidation</a></td><td rowspan="1">1772711534965</td><td rowspan="1">14954</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4">Search Product Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">BOTPAssignment.SeleniumFrameworkDesign.Tests.SearchProductTest</td><td><a href="#m6">serchProduct</a></td><td rowspan="2">1772711598997</td><td rowspan="2">40</td></tr><tr class="failedeven"><td><a href="#m7">serchProduct</a></td></tr><tr><th colspan="4">Search Product Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">BOTPAssignment.SeleniumFrameworkDesign.Tests.SearchProductTest</td><td><a href="#m8">serchProduct</a></td><td rowspan="1">1772711570854</td><td rowspan="1">15196</td></tr></tbody>
+<tbody id="t3"><tr><th colspan="4">Order History &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">BOTPAssignment.SeleniumFrameworkDesign.Tests.OrderHistoryTest</td><td><a href="#m9">OrderHistory</a></td><td rowspan="2">1772711613806</td><td rowspan="2">53</td></tr><tr class="failedeven"><td><a href="#m10">OrderHistory</a></td></tr><tr><th colspan="4">Order History &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">BOTPAssignment.SeleniumFrameworkDesign.Tests.OrderHistoryTest</td><td><a href="#m11">OrderHistory</a></td><td rowspan="1">1772711607142</td><td rowspan="1">1252</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">BOTPAssignment.SeleniumFrameworkDesign.Tests.SubmitOrderTest#submitOrder</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>null</td><td>null</td><td>null</td><td>null</td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+<h2>Submit Order Test</h2><h3 id="m0">BOTPAssignment.SeleniumFrameworkDesign.Tests.SubmitOrderTest#submitOrder</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>null</td><td>null</td><td>null</td><td>null</td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
 	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy13.sendKeys(Unknown Source)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.sendKeys(Unknown Source)
 	at BOTPAssignment.pageobjects.LandingPage.loginApplication(LandingPage.java:33)
 	at BOTPAssignment.SeleniumFrameworkDesign.Tests.SubmitOrderTest.submitOrder(SubmitOrderTest.java:39)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m1">BOTPAssignment.SeleniumFrameworkDesign.Tests.SubmitOrderTest#submitOrder</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>null</td><td>null</td><td>null</td><td>null</td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
 	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy13.sendKeys(Unknown Source)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.sendKeys(Unknown Source)
 	at BOTPAssignment.pageobjects.LandingPage.loginApplication(LandingPage.java:33)
 	at BOTPAssignment.SeleniumFrameworkDesign.Tests.SubmitOrderTest.submitOrder(SubmitOrderTest.java:39)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m2">BOTPAssignment.SeleniumFrameworkDesign.Tests.SubmitOrderTest#submitOrder</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>pratibhapatil@gmail.com</td><td>Pratibha@04</td><td>ZARA COAT 3</td><td>iphone 13 pro</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Error Validations Test</h2><h3 id="m3">BOTPAssignment.SeleniumFrameworkDesign.Tests.ErrorValidationsTest#productErrorValidation</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>null</td><td>null</td><td>null</td><td>null</td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.sendKeys(Unknown Source)
+	at BOTPAssignment.pageobjects.LandingPage.loginApplication(LandingPage.java:33)
+	at BOTPAssignment.SeleniumFrameworkDesign.Tests.ErrorValidationsTest.productErrorValidation(ErrorValidationsTest.java:40)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">BOTPAssignment.SeleniumFrameworkDesign.Tests.ErrorValidationsTest#productErrorValidation</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>null</td><td>null</td><td>null</td><td>null</td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.sendKeys(Unknown Source)
+	at BOTPAssignment.pageobjects.LandingPage.loginApplication(LandingPage.java:33)
+	at BOTPAssignment.SeleniumFrameworkDesign.Tests.ErrorValidationsTest.productErrorValidation(ErrorValidationsTest.java:40)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">BOTPAssignment.SeleniumFrameworkDesign.Tests.ErrorValidationsTest#productErrorValidation</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>pratibhapatil@gmail.com</td><td>Pratibha@04</td><td>ZARA COAT 3</td><td>iphone 13 pro</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Search Product Test</h2><h3 id="m6">BOTPAssignment.SeleniumFrameworkDesign.Tests.SearchProductTest#serchProduct</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>null</td><td>null</td><td>null</td><td>null</td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.sendKeys(Unknown Source)
+	at BOTPAssignment.pageobjects.LandingPage.loginApplication(LandingPage.java:33)
+	at BOTPAssignment.SeleniumFrameworkDesign.Tests.SearchProductTest.serchProduct(SearchProductTest.java:18)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">BOTPAssignment.SeleniumFrameworkDesign.Tests.SearchProductTest#serchProduct</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>null</td><td>null</td><td>null</td><td>null</td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.sendKeys(Unknown Source)
+	at BOTPAssignment.pageobjects.LandingPage.loginApplication(LandingPage.java:33)
+	at BOTPAssignment.SeleniumFrameworkDesign.Tests.SearchProductTest.serchProduct(SearchProductTest.java:18)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">BOTPAssignment.SeleniumFrameworkDesign.Tests.SearchProductTest#serchProduct</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>pratibhapatil@gmail.com</td><td>Pratibha@04</td><td>ZARA COAT 3</td><td>iphone 13 pro</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Order History</h2><h3 id="m9">BOTPAssignment.SeleniumFrameworkDesign.Tests.OrderHistoryTest#OrderHistory</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>null</td><td>null</td><td>null</td><td>null</td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.sendKeys(Unknown Source)
+	at BOTPAssignment.pageobjects.LandingPage.loginApplication(LandingPage.java:33)
+	at BOTPAssignment.SeleniumFrameworkDesign.Tests.OrderHistoryTest.OrderHistory(OrderHistoryTest.java:17)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">BOTPAssignment.SeleniumFrameworkDesign.Tests.OrderHistoryTest#OrderHistory</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>null</td><td>null</td><td>null</td><td>null</td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.sendKeys(Unknown Source)
+	at BOTPAssignment.pageobjects.LandingPage.loginApplication(LandingPage.java:33)
+	at BOTPAssignment.SeleniumFrameworkDesign.Tests.OrderHistoryTest.OrderHistory(OrderHistoryTest.java:17)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">BOTPAssignment.SeleniumFrameworkDesign.Tests.OrderHistoryTest#OrderHistory</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>pratibhapatil@gmail.com</td><td>Pratibha@04</td><td>ZARA COAT 3</td><td>iphone 13 pro</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

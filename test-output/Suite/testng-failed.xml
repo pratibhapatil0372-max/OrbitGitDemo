@@ -8,7 +8,7 @@
     <classes>
       <class name="BOTPAssignment.SeleniumFrameworkDesign.Tests.SubmitOrderTest">
         <methods>
-          <include name="submitOrder" invocation-numbers="0 1 2"/>
+          <include name="submitOrder" invocation-numbers="1 2"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
         </methods>
@@ -21,7 +21,7 @@
         <methods>
           <include name="launchApplication"/>
           <include name="tearDown"/>
-          <include name="productErrorValidation" invocation-numbers="0 1 2"/>
+          <include name="productErrorValidation" invocation-numbers="1 2"/>
         </methods>
       </class> <!-- BOTPAssignment.SeleniumFrameworkDesign.Tests.ErrorValidationsTest -->
     </classes>
@@ -37,4 +37,15 @@
       </class> <!-- BOTPAssignment.SeleniumFrameworkDesign.Tests.SearchProductTest -->
     </classes>
   </test> <!-- Search Product Test(failed) -->
+  <test thread-count="5" name="Order History(failed)">
+    <classes>
+      <class name="BOTPAssignment.SeleniumFrameworkDesign.Tests.OrderHistoryTest">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+          <include name="OrderHistory" invocation-numbers="1 2"/>
+        </methods>
+      </class> <!-- BOTPAssignment.SeleniumFrameworkDesign.Tests.OrderHistoryTest -->
+    </classes>
+  </test> <!-- Order History(failed) -->
 </suite> <!-- Failed suite [Suite] -->
