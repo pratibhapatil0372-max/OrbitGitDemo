@@ -33,7 +33,7 @@ public class SubmitOrderTest extends BaseTest{
 
 	
 	@Test(dataProvider="getDataFromSheet")
-	public void submitOrder(String email, String pass, String productName, String productname2) throws IOException{
+	public void submitOrder(String email, String pass, String productName, String productname2) {
 					
 		ProductCatalogue productCatalogue = new ProductCatalogue(driver);		
 		landingpage.loginApplication(email,pass);		

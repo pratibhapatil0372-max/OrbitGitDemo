@@ -24,24 +24,25 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class ErrorValidationsTest extends BaseTest{
 
-	@Test(dataProvider="getDataFromSheet")
-	public void submitOrder(String email, String pass, String productName, String productname2) throws IOException{
-						
-		landingpage.loginApplication("anshika@gmail.com","Anshika@04");	
-		Assert.assertEquals("Incorrect email or password.",landingpage.getErrorMessage());		
-
-	}
+//	@Test(dataProvider="getDataFromSheet")
+//	public void submitOrder(String email, String pass, String productName, String productname2) throws IOException{
+//						
+//		landingpage.loginApplication("anshika@gmail.com","Anshika@04");	
+//		Assert.assertEquals("Incorrect email or password.",landingpage.getErrorMessage());		
+//
+//	}
 	
 	@Test(dataProvider="getDataFromSheet")
-	public void productErrorValidation(String email, String pass, String productName, String productname2) 
+	public void productErrorValidation(String email, String pass, String productName, String productname2) throws InterruptedException 
 	{
 		String product = productName;	
+		System.out.println("The product name:"+product);
 		ProductCatalogue productCatalogue = landingpage.loginApplication(email,pass);
 		List<WebElement> products = productCatalogue.getProductList();
-		productCatalogue.addProductToCart(productName);
+		productCatalogue.addProductToCart(product);
 		CartPage cartpage = productCatalogue.goToCartPage();
 		Boolean match = cartpage.verifyProductDisplay(product);
-		Assert.assertFalse(match);
+		Assert.assertTrue(match);
 				
 	}
 

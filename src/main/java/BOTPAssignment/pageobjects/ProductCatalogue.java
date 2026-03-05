@@ -3,6 +3,7 @@ package BOTPAssignment.pageobjects;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -26,8 +27,11 @@ public class ProductCatalogue extends AbstractComponent{
 	@FindBy(css=".ng-animating")
 	WebElement spinner;
 	
-	By productsBy = By.cssSelector(".mb-3");
-	By addToCart = By.cssSelector(".card-body button:last-of-type");
+	@FindBy(xpath="//div[@class='row']//div[2]//div[1]//div[1]//button[2]")
+	WebElement addCart;
+	
+	By productsBy = By.cssSelector(".offset-sm-1");
+	By addToCart = By.xpath("//div[@class='row']//div[2]//div[1]//div[1]//button[2]");
 	By toastMessage = By.cssSelector("#toast-container");
 	
 	public List<WebElement> getProductList() {
@@ -43,9 +47,14 @@ public class ProductCatalogue extends AbstractComponent{
 	
 	public void addProductToCart(String productName) {
 		WebElement prod = getProductByName(productName);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true);",addCart);	
+		waitForWebElementToBeClickable(addToCart);
 		prod.findElement(addToCart).click();
-		waitForElementToAppear(toastMessage);
-		waitForElementToDisappear(spinner);
+		//waitForElementToDisappear(spinner);
+		//waitForElementToAppear(toastMessage);
+			
+		
 	}
 	
 		

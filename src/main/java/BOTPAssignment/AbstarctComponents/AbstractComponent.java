@@ -3,6 +3,7 @@ package BOTPAssignment.AbstarctComponents;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -34,6 +35,12 @@ public class AbstractComponent {
 	public void waitForElementToAppear(By findBy) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
+				
+	}
+	
+	public void waitForWebElementToBeClickable(By findBy) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.elementToBeClickable(findBy));
 		
 	}
 	
@@ -52,7 +59,8 @@ public class AbstractComponent {
 	public CartPage goToCartPage() 
 	{
 		waitForElementToDisappear(spinner);
-		//waitForElementToAppear(toastMessage);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true);",cartHeader);	
 		cartHeader.click();
 		CartPage cartpage = new CartPage(driver);
 		return cartpage;

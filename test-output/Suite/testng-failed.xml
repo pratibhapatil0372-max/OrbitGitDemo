@@ -8,12 +8,33 @@
     <classes>
       <class name="BOTPAssignment.SeleniumFrameworkDesign.Tests.SubmitOrderTest">
         <methods>
-          <include name="submitOrder" invocation-numbers="1 2"/>
+          <include name="submitOrder" invocation-numbers="0 1 2"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
-          <include name="OrderHistoryTest" invocation-numbers="0 1 2"/>
         </methods>
       </class> <!-- BOTPAssignment.SeleniumFrameworkDesign.Tests.SubmitOrderTest -->
     </classes>
   </test> <!-- Submit Order Test(failed) -->
+  <test thread-count="5" name="Error Validations Test(failed)">
+    <classes>
+      <class name="BOTPAssignment.SeleniumFrameworkDesign.Tests.ErrorValidationsTest">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+          <include name="productErrorValidation" invocation-numbers="0 1 2"/>
+        </methods>
+      </class> <!-- BOTPAssignment.SeleniumFrameworkDesign.Tests.ErrorValidationsTest -->
+    </classes>
+  </test> <!-- Error Validations Test(failed) -->
+  <test thread-count="5" name="Search Product Test(failed)">
+    <classes>
+      <class name="BOTPAssignment.SeleniumFrameworkDesign.Tests.SearchProductTest">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+          <include name="serchProduct" invocation-numbers="1 2"/>
+        </methods>
+      </class> <!-- BOTPAssignment.SeleniumFrameworkDesign.Tests.SearchProductTest -->
+    </classes>
+  </test> <!-- Search Product Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
