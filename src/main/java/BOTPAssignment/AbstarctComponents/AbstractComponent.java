@@ -66,7 +66,7 @@ public class AbstractComponent {
 		js.executeScript("window.scrollTo(0, 0);");
 		//js.executeScript("arguments[0].scrollIntoView({behavior:'instant', block:'start'});", cartlink);
 		//js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", cartHeader);
-		//js.executeScript("document.documentElement.scrollTop = 0;");
+		js.executeScript("document.documentElement.scrollTop = 0;");
 		waitForElementToAppear(cartlink);
 		cartHeader.click();
 		CartPage cartpage = new CartPage(driver);

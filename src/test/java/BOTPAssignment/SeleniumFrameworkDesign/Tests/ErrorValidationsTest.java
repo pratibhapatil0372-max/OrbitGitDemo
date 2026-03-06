@@ -15,6 +15,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import BOTPAssignment.TestComponents.BaseTest;
+import BOTPAssignment.TestComponents.BaseTest.ExcelFile;
 import BOTPAssignment.pageobjects.CartPage;
 import BOTPAssignment.pageobjects.CheckOutPage;
 import BOTPAssignment.pageobjects.ConfirmationPage;
@@ -24,26 +25,16 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class ErrorValidationsTest extends BaseTest{
 
-//	@Test(dataProvider="getDataFromSheet")
-//	public void submitOrder(String email, String pass, String productName, String productname2) throws IOException{
-//						
-//		landingpage.loginApplication("anshika@gmail.com","Anshika@04");	
-//		Assert.assertEquals("Incorrect email or password.",landingpage.getErrorMessage());		
-//
-//	}
 	
-	@Test(dataProvider="getDataFromSheet")
-	public void productErrorValidation(String email, String pass, String productName, String productname2) throws InterruptedException 
-	{
-		String product = productName;	
-		System.out.println("The product name:"+product);
-		ProductCatalogue productCatalogue = landingpage.loginApplication(email,pass);
-		List<WebElement> products = productCatalogue.getProductList();
-		productCatalogue.addProductToCart(product);
-		CartPage cartpage = productCatalogue.goToCartPage();
-		Boolean match = cartpage.verifyProductDisplay(product);
-		Assert.assertTrue(match);
-				
+	@ExcelFile(value = "userdata_B.xlsx", sheetName = "Sheet1")
+	@Test(dataProvider="excelData", dataProviderClass = BaseTest.class)
+	
+	public void submitOrder(String email, String pass) throws IOException{
+						
+		landingpage.loginApplication(email,pass);	
+		Assert.assertEquals("Incorrect email or password.",landingpage.getErrorMessage());		
+
 	}
+	
 
 }

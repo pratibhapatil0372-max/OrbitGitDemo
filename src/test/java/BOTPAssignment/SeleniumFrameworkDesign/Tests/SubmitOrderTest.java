@@ -31,8 +31,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SubmitOrderTest extends BaseTest{
 
-	
-	@Test(dataProvider="getDataFromSheet")
+	@ExcelFile(value = "userdata.xlsx", sheetName = "Sheet1")
+	@Test(dataProvider="excelData", dataProviderClass = BaseTest.class)
 	public void submitOrder(String email, String pass, String productName, String productname2) {
 					
 		ProductCatalogue productCatalogue = new ProductCatalogue(driver);		

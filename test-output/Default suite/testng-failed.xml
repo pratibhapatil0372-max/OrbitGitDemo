@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="BOTPAssignment.SeleniumFrameworkDesign.Tests.OrderHistoryTest">
+      <class name="BOTPAssignment.SeleniumFrameworkDesign.Tests.SubmitOrderTest">
         <methods>
+          <include name="submitOrder" invocation-numbers="0"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
-          <include name="OrderHistory" invocation-numbers="1 2"/>
         </methods>
-      </class> <!-- BOTPAssignment.SeleniumFrameworkDesign.Tests.OrderHistoryTest -->
+      </class> <!-- BOTPAssignment.SeleniumFrameworkDesign.Tests.SubmitOrderTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

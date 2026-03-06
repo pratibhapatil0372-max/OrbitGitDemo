@@ -29,6 +29,7 @@ public class CheckOutPage extends AbstractComponent{
 	
 	@FindBy(css=".btnn.action__submit.ng-star-inserted")
 	WebElement submit;
+	By submitbtn = By.cssSelector(".btnn.action__submit.ng-star-inserted");
 	By results = By.cssSelector(".ta-results");
 	
 	public void selectCountry(String countryName)
@@ -44,6 +45,7 @@ public class CheckOutPage extends AbstractComponent{
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);",submit);
+		waitForWebElementToBeClickable(submitbtn);
 		waitForWebElementToAppear(submit);
 		submit.click();
 		return new ConfirmationPage(driver);
