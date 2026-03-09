@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-	
+<suite name="Suite">	
 	<listeners>
         <listener class-name="BOTPAssignment.TestComponents.Listeners"/>
     </listeners>
-  <test thread-count="5" name="Submit Order Test">
+  <test name="Submit Order Test">
     <classes>
       <class name="BOTPAssignment.SeleniumFrameworkDesign.Tests.SubmitOrderTest"/>
     </classes>
   </test> <!-- Test -->  
-   <test thread-count="5" name="Error Validations Test">
+   <test name="Error Validations Test">
     <classes>
       <class name="BOTPAssignment.SeleniumFrameworkDesign.Tests.ErrorValidationsTest"/>
     </classes>
   </test> <!-- Test -->
-  <test thread-count="5" name="Search Product Test">
+  <test name="Search Product Test">
     <classes>
       <class name="BOTPAssignment.SeleniumFrameworkDesign.Tests.SearchProductTest"/>
     </classes>
   </test> <!-- Test -->
-  <test thread-count="5" name="Order History">
+  <test name="Order History">
     <classes>
       <class name="BOTPAssignment.SeleniumFrameworkDesign.Tests.OrderHistoryTest"/>
     </classes>
   </test> <!-- Test -->
+  <test name="product Validation Test">
+    <classes>
+      <class name="BOTPAssignment.SeleniumFrameworkDesign.Tests.ProductValidation"/>
+    </classes>
+  </test> <!-- Test --> 
   
 </suite> <!-- Suite -->

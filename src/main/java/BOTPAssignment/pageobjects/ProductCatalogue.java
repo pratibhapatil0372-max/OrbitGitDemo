@@ -52,6 +52,7 @@ public class ProductCatalogue extends AbstractComponent{
 		WebElement prod = getProductByName(productName);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);",addCart);	
+		waitForElementToAppear(addToCart);
 		waitForWebElementToBeClickable(addToCart);
 		prod.findElement(addToCart).click();
 		//waitForElementToDisappear(spinner);

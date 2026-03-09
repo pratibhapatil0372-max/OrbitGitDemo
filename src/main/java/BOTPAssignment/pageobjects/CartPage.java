@@ -42,6 +42,7 @@ public class CartPage extends AbstractComponent {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);",checkOutEle);		
 		waitForElementToAppear(checkOutElem);
+		waitForWebElementToBeClickable(checkOutElem);
 		checkOutEle.click();
 		return new CheckOutPage(driver);
 	}
