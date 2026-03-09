@@ -63,6 +63,7 @@ public class SearchProduct extends AbstractComponent{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);",addCart);
 		waitForElementToAppear(addToCart);
+		waitForWebElementToBeClickable(addToCart);
 		prod.findElement(addToCart).click();
 		waitForElementToDisappear(spinner);
 	}
