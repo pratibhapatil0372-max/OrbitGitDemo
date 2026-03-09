@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-09T11:41:35 IST" name="Default suite" finished-at="2026-03-09T11:41:55 IST" duration-ms="19524">
+  <suite started-at="2026-03-09T13:57:22 IST" name="Default suite" finished-at="2026-03-09T13:57:37 IST" duration-ms="15261">
     <groups>
     </groups>
-    <test started-at="2026-03-09T11:41:35 IST" name="Default test" finished-at="2026-03-09T11:41:55 IST" duration-ms="19524">
-      <class name="BOTPAssignment.SeleniumFrameworkDesign.Tests.SubmitOrderTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:BOTPAssignment.SeleniumFrameworkDesign.Tests.SubmitOrderTest@560348e6]" started-at="2026-03-09T11:41:36 IST" name="launchApplication" finished-at="2026-03-09T11:41:39 IST" duration-ms="3628" status="PASS">
+    <test started-at="2026-03-09T13:57:22 IST" name="Default test" finished-at="2026-03-09T13:57:37 IST" duration-ms="15261">
+      <class name="BOTPAssignment.SeleniumFrameworkDesign.Tests.SearchProductTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:BOTPAssignment.SeleniumFrameworkDesign.Tests.SearchProductTest@560348e6]" started-at="2026-03-09T13:57:22 IST" name="launchApplication" finished-at="2026-03-09T13:57:26 IST" duration-ms="3901" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrder(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:BOTPAssignment.SeleniumFrameworkDesign.Tests.SubmitOrderTest@560348e6]" started-at="2026-03-09T11:41:39 IST" name="submitOrder" data-provider="excelData" finished-at="2026-03-09T11:41:54 IST" duration-ms="15116" status="PASS">
+        <test-method signature="serchProduct(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:BOTPAssignment.SeleniumFrameworkDesign.Tests.SearchProductTest@560348e6]" started-at="2026-03-09T13:57:26 IST" name="serchProduct" data-provider="excelData" finished-at="2026-03-09T13:57:37 IST" duration-ms="10568" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -34,14 +34,58 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebElement.isDisplayed()" because "element" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.isDisplayed()" because "element" is null
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:308)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:294)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:291)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+at BOTPAssignment.AbstarctComponents.AbstractComponent.waitForWebElementToAppear(AbstractComponent.java:51)
+at BOTPAssignment.pageobjects.SearchProduct.addSearchedProductToCart(SearchProduct.java:62)
+at BOTPAssignment.SeleniumFrameworkDesign.Tests.SearchProductTest.serchProduct(SearchProductTest.java:25)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:BOTPAssignment.SeleniumFrameworkDesign.Tests.SubmitOrderTest@560348e6]" started-at="2026-03-09T11:41:54 IST" name="tearDown" finished-at="2026-03-09T11:41:55 IST" duration-ms="228" status="PASS">
+        </test-method> <!-- serchProduct -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:BOTPAssignment.SeleniumFrameworkDesign.Tests.SearchProductTest@560348e6]" started-at="2026-03-09T13:57:37 IST" name="tearDown" finished-at="2026-03-09T13:57:37 IST" duration-ms="215" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- BOTPAssignment.SeleniumFrameworkDesign.Tests.SubmitOrderTest -->
+      </class> <!-- BOTPAssignment.SeleniumFrameworkDesign.Tests.SearchProductTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

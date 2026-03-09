@@ -6,12 +6,14 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import BOTPAssignment.TestComponents.BaseTest;
+import BOTPAssignment.TestComponents.BaseTest.ExcelFile;
 import BOTPAssignment.pageobjects.ProductCatalogue;
 import BOTPAssignment.pageobjects.SearchProduct;
 
 public class SearchProductTest extends BaseTest{
 	
-	@Test(dataProvider="getDataFromSheet")
+	@ExcelFile(value = "userdata.xlsx", sheetName = "Sheet1")
+	@Test(dataProvider="excelData", dataProviderClass = BaseTest.class)
 	
 	public void serchProduct(String email, String pass,String productname, String productname2) {
 	
